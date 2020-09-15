@@ -34,6 +34,8 @@
       <div class="container">
         <h2 class="text-center mt-3"> Adopt A Buddy </h2>
         <br><br><br><br>
+
+        
         <form action = '/' method = 'POST'>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -101,30 +103,54 @@
                     </select>
                   </div>
               </div><br>
-
-                <div class="form-group col-md-12">
+              <div class="form-row">
+                <div class="form-group col-md-6">
                   <label for="inputEmail4">Color Number</label>
                   <div class="d-flex justify-content-center my-4">
-                
-        
+                    
+                    
                     <input id="slider11" name="color" class="custom-range" type="range" min="0" max="55" step="1" />
-                
-                <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan"></span>
-                </div>
+                    
+                    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan"></span>
+                  </div>
         
                   </div>
-                <div class="form-group col-md-12">
-                  <label for="inputPassword4">Duration</label>
-                  <div class="d-flex justify-content-center my-4">
-                
-        
-                    <input id="slider112" name="duration" class="custom-range" type="range" min="-100" max="10000" step="1" />
-                
-                <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan2"></span>
-                </div>
-        
-                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Duration</label>
+                    <div class="d-flex justify-content-center my-4">
+                  
+                      
+                      <input id="slider112" name="duration" class="custom-range" type="range" min="-100" max="10000" step="1" />
+                      
+                      <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan2"></span>
+                    </div>
+                    
+                  </div></div>
+                      <div class="form-row">
 
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Height</label>
+                      <div class="d-flex justify-content-center my-4">
+                    
+            
+                        <input id="slider113" name="height" class="custom-range" type="range" min="5" max="50" step="1" />
+                    
+                    <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan3"></span>
+                    </div>
+            
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Width</label>
+                        <div class="d-flex justify-content-center my-4">
+                      
+              
+                          <input id="slider114" name="width" class="custom-range" type="range" min="0" max="1" step="0.001" />
+                      
+                      <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan4"></span>
+                      </div>
+              
+                        </div></div>
+          
               
 
 
@@ -161,6 +187,34 @@
 
             const $valueSpan = $('.valueSpan2');
             const $value = $('#slider112');
+            $valueSpan.html($value.val());
+            $value.on('input change', () => {
+          
+              $valueSpan.html($value.val());
+            });
+          });
+
+    </script>
+    <script>
+
+        $(document).ready(function() {
+
+            const $valueSpan = $('.valueSpan3');
+            const $value = $('#slider113');
+            $valueSpan.html($value.val());
+            $value.on('input change', () => {
+          
+              $valueSpan.html($value.val());
+            });
+          });
+
+    </script>
+    <script>
+
+        $(document).ready(function() {
+
+            const $valueSpan = $('.valueSpan4');
+            const $value = $('#slider114');
             $valueSpan.html($value.val());
             $value.on('input change', () => {
           
